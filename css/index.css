@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 @font-face{
     src: url(/fonts/Nunito-VariableFont_wght.ttf);
     font-family: Nunito;
@@ -14,18 +18,15 @@ body{
     border-left: solid 2px hsl(36, 100%, 89%);
     border-right: solid 2px hsl(36, 100%, 89%);
     margin: 0;
-
-    color: hsl(35, 100%, 94%);
 }
 #title{
-    margin-top: 6vh;
+    margin: 6vh;
     /* background-color: hsl(0, 0%, 8%);
     border-radius: 15px; */
     text-align: center;
     font-family: "Nunito", Arial;
-    padding: 0px;
-    width: 600px;
     justify-self: center;
+    color: hsl(35, 100%, 97%);
 }
 
 /* main box */
@@ -38,15 +39,26 @@ body{
     height: 600px;
     width: 800px;
 }
-#projects{
-    font-size: 40px;
+#webring{
+    text-align: center;
+}
+#webring a{
+    text-decoration: none;
+    color: hsl(35, 100%, 97%);
+}
+.button{
+    display: inline-block;
     height: 140px;
     width: 270px;
+
+    background-color: hsla(0, 0%, 15%, 0.80);
+    border: none;
     border-radius: 15px;
-    margin: 50px;
-}
-#projects:hover{
-    
+    margin: 5%;
+
+    color: hsl(35, 100%, 97%);
+    font-size: 40px;
+    cursor: pointer;
 }
 
 
