@@ -31,7 +31,8 @@ body{
 
 /* main box */
 #box{
-    background-color: hsla(0, 0%, 15%, 0.80);
+    background-color: hsla(0, 0%, 15%, 0.60);
+    backdrop-filter: blur(1px);
     border: solid 1px hsl(36, 100%, 89%);
     border-radius: 15px;
     margin-top: 6vh;
@@ -39,28 +40,54 @@ body{
     height: 600px;
     width: 800px;
 }
+/* webring */
 #webring{
+    display: block;
     text-align: center;
 }
 #webring a{
     text-decoration: none;
     color: hsl(35, 100%, 97%);
 }
-.button{
-    display: inline-block;
+/* main buttons */
+#pageBtns{
+    margin: 30px;
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    /* border: red solid 3px; */
+}
+.btn1{
     height: 140px;
-    width: 270px;
+    width: 42%;
 
-    background-color: hsla(0, 0%, 15%, 0.80);
+    background-color: hsla(0, 0%, 15%);
     border: none;
     border-radius: 15px;
-    margin: 5%;
+    box-shadow: 1px 2px 5px hsl(0, 0%, 8%);
 
     color: hsl(35, 100%, 97%);
     font-size: 40px;
     cursor: pointer;
 }
-
+.btn1:hover{
+    background-color: hsl(0, 0%, 0%, 0);
+    box-shadow: none;
+}
+.btn1:active{
+    background-color: hsl(36, 100%, 89%, 0.50);
+}
+/* contact buttons */
+#contactBtns{
+    margin: 30px;
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
 
 /* desktops */
 #name{
