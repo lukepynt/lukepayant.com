@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    color:hsl(0, 0%, 90%);
 }
 
 @font-face{
@@ -18,8 +19,6 @@ body{
     border-left: solid 2px hsl(0, 0%, 90%);
     border-right: solid 2px hsl(0, 0%, 90%);
     margin: 0;
-
-    color: white;
 }
 #title{
     margin: 6vh;
@@ -35,7 +34,11 @@ body{
     backdrop-filter: blur(1px);
     border: solid 1px hsl(0, 0%, 90%);
     border-radius: 15px;
-    background: linear-gradient(-225deg, hsl(0, 0%, 18%, 0.80), hsla(0, 0%, 12%, 0.80));
+    background: repeating-linear-gradient(-225deg, 
+        hsla(0, 0%, 12%, 0.80),
+        hsl(0, 0%, 20%, 0.80) 500px,
+        hsla(0, 0%, 12%, 0.80) 1000px
+    );
     /* mask-image: radial-gradient(circle at 0px 0px, transparent 50px, black 60px); */
 
     margin-top: 6vh;
@@ -61,7 +64,11 @@ body{
     width: 60px;
     border-radius: 100px;
     text-decoration: none;
-    color: hsl(35, 100%, 97%);
+}
+#webring a img{
+    height: 35px;
+    position: relative;
+    top: 7px;
 }
 /* main buttons */
 #pageBtns{
@@ -95,9 +102,8 @@ body{
     border-radius: 15px;
     box-shadow: 1px 2px 5px hsl(0, 0%, 2%);
 
-    color: hsl(35, 100%, 97%);
     cursor: pointer;
-    transition: border-color 0.75s, background-color 0.25s, box-shadow 0.25s;
+    transition: border-color 1s, background-color 0.25s, box-shadow 0.25s;
 }
 .btn1:hover{
     background-color: hsl(0, 0%, 0%, 0);
