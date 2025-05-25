@@ -1,23 +1,28 @@
+:root {
+    --highlight-color: hsl(0, 0%, 90%);
+    --background-color: hsl(0, 0%, 8%);
+}
+
 *{
     box-sizing: border-box;
-    color:hsl(0, 0%, 90%);
+    color: var(--highlight-color);
 }
 
 @font-face{
-    src: url(/fonts/Nunito-VariableFont_wght.ttf);
+    src: url(/assets/fonts/Nunito-VariableFont_wght.ttf);
     font-family: Nunito;
 }
 body{
     /* background */
-    background-image: url(/images/dots.png);
+    background-image: url(/assets/images/dots2.png);
     background-repeat: repeat;
     background-attachment: fixed;
-    background-size: 75px;
-    background-color: hsl(0, 0%, 8%);
+    background-size: 48px;
+    background-color: var(--background-color);
 
     /* border */
-    border-left: solid 2px hsl(0, 0%, 90%);
-    border-right: solid 2px hsl(0, 0%, 90%);
+    border-left: solid 10px var(--highlight-color);
+    border-right: solid 10px var(--highlight-color);
     margin: 0;
 }
 #title{
@@ -32,14 +37,13 @@ body{
 /* main box */
 #box{
     backdrop-filter: blur(1px);
-    border: solid 1px hsl(0, 0%, 90%);
+    border: solid 1px var(--highlight-color);
     border-radius: 15px;
     background: repeating-linear-gradient(-225deg, 
-        hsla(0, 0%, 12%, 0.80),
-        hsl(0, 0%, 20%, 0.80) 500px,
-        hsla(0, 0%, 12%, 0.80) 1000px
+        hsla(0, 0%, 12%, 0.8),
+        hsl(0, 0%, 20%, 0.8) 500px,
+        hsla(0, 0%, 12%, 0.8) 1000px
     );
-    /* mask-image: radial-gradient(circle at 0px 0px, transparent 50px, black 60px); */
 
     margin-top: 6vh;
     justify-self: center;
@@ -47,52 +51,63 @@ body{
     width: 1000px;
 }
 
-/* ----button positions---- */
-/* webring */
-#webring{
-    display: block;
-    margin: 25px;
-    text-align: center;
+/* ----button positions and sizes---- */
+/* contact buttons */
+#contactBtns{
+    margin: 30px;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
-#webring a{
-    font-size: 25px;
-    margin: 5px;
-    text-align: center;
-    line-height: 60px;
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    border-radius: 100px;
+#contactBtns a{
+    height: 70px;
+    width: 70px;
     text-decoration: none;
-}
-#webring a img{
-    height: 35px;
-    position: relative;
-    top: 7px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    fill: var(--highlight-color)
 }
 /* main buttons */
 #pageBtns{
     margin: 30px;
-    gap: 30px;
+    
     display: flex;
+    gap: 30px;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     /* border: red solid 3px; */
 }
-#pageBtns .btn1{
+#pageBtns button{
     height: 140px;
     width: 42%;
     font-size: 40px;
 }
-/* contact buttons */
-#contactBtns{
-    margin: 30px;
-    gap: 30px;
+/* webring */
+#webring{
+    margin: 25px;
+
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     justify-content: center;
+}
+#webring a{
+    margin: 7px;
+    font-size: 25px;
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#webring a img{
+    height: 35px;
 }
 
 /* All button effects */
@@ -100,20 +115,25 @@ body{
     background-color: hsl(0, 0%, 10%);
     border: 1px solid hsl(0, 0%, 0%, 0);
     border-radius: 15px;
-    box-shadow: 1px 2px 5px hsl(0, 0%, 2%);
+    box-shadow: 3px 3px 5px hsl(0, 0%, 2%), -3px -3px 5px hsl(0, 0%, 30%, 0.80);
 
     cursor: pointer;
-    transition: border-color 1s, background-color 0.25s, box-shadow 0.25s;
+    transition: border-color 1s, background-color 0.25s;
 }
 .btn1:hover{
-    background-color: hsl(0, 0%, 0%, 0);
-    box-shadow: none;
-    border: solid 1px hsl(0, 0%, 90%);
+    background: repeating-linear-gradient(225deg, 
+        hsla(0, 0%, 12%, 0.4),
+        hsl(0, 0%, 20%, 0.4) 100px,
+        hsla(0, 0%, 12%, 0.4) 200px
+    );
+    border: solid 1px var(--highlight-color);
 }
 .btn1:active{
+    background: none;
     background-color: hsl(0, 0%, 8%);
+    --highlight-color: hsl(0, 0%, 70%);
     backdrop-filter: blur(1px);
-    box-shadow: inset 3px 6px 10px hsl(0, 0%, 2%);
+    box-shadow: inset 5px 5px 5px hsl(0, 0%, 0%), inset -5px -5px 5px hsl(0, 0%, 18%);
 }
 
 /* desktops */
