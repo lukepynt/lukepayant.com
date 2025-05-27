@@ -1,50 +1,13 @@
-:root {
-    --highlight-color: hsl(0, 0%, 90%);
-    --background-color: hsl(0, 0%, 8%);
-}
-
-*{
-    box-sizing: border-box;
-    color: var(--highlight-color);
-}
-
-@font-face{
-    src: url(/assets/fonts/Nunito-VariableFont_wght.ttf);
-    font-family: Nunito;
-}
-body{
-    /* background */
-    background-image: url(/assets/images/dots2.png);
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-size: 48px;
-    background-color: var(--background-color);
-
-    /* border */
-    border-left: solid 10px var(--highlight-color);
-    border-right: solid 10px var(--highlight-color);
-    margin: 0;
-}
 #title{
     margin: 6vh;
     /* background-color: hsl(0, 0%, 8%);
     border-radius: 15px; */
     text-align: center;
-    font-family: "Nunito", Arial;
     justify-self: center;
 }
 
 /* main box */
-#box{
-    backdrop-filter: blur(1px);
-    border: solid 1px var(--highlight-color);
-    border-radius: 15px;
-    background: repeating-linear-gradient(-225deg, 
-        hsla(0, 0%, 12%, 0.8),
-        hsl(0, 0%, 20%, 0.8) 500px,
-        hsla(0, 0%, 12%, 0.8) 1000px
-    );
-
+.box{
     margin-top: 6vh;
     justify-self: center;
     height: 600px;
@@ -108,32 +71,6 @@ body{
 }
 #webring a img{
     height: 35px;
-}
-
-/* All button effects */
-.btn1{
-    background-color: hsl(0, 0%, 10%);
-    border: 1px solid hsl(0, 0%, 0%, 0);
-    border-radius: 15px;
-    box-shadow: 3px 3px 5px hsl(0, 0%, 2%), -3px -3px 5px hsl(0, 0%, 30%, 0.80);
-
-    cursor: pointer;
-    transition: border-color 1s, background-color 0.25s;
-}
-.btn1:hover{
-    background: repeating-linear-gradient(225deg, 
-        hsla(0, 0%, 12%, 0.4),
-        hsl(0, 0%, 20%, 0.4) 100px,
-        hsla(0, 0%, 12%, 0.4) 200px
-    );
-    border: solid 1px var(--highlight-color);
-}
-.btn1:active{
-    background: none;
-    background-color: hsl(0, 0%, 8%);
-    --highlight-color: hsl(0, 0%, 70%);
-    backdrop-filter: blur(1px);
-    box-shadow: inset 5px 5px 5px hsl(0, 0%, 0%), inset -5px -5px 5px hsl(0, 0%, 18%);
 }
 
 /* desktops */
