@@ -45,10 +45,15 @@
     justify-content: center;
     /* border: red solid 3px; */
 }
-#pageBtns button{
+#pageBtns a{
     height: 140px;
     width: 420px;
     font-size: 40px;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* webring */
 #webring{

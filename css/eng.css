@@ -1,3 +1,18 @@
+/* ----Back Btn---- */
+#back{
+    margin-left: 40px;
+    font-size: 25px;
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    float: left;
+
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* ----Search box---- */
 /* Box */
 #searchBox{
@@ -57,12 +72,26 @@ input[type="checkbox"]{
 }
 
 /* ----Projects---- */
-/* class used in searching javascript */
-.hide{
-    display: none;
+#projects{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+/* project boxes */
+.project{
+    display: flow-root;
+    width: 1500px;
+
+    padding: 50px;
 }
 img{
     width: 400px;
-    display: inline-block;
+    float: right;
+}
+
+/* class used for displaying search results */
+.hide{
+    display: none;
 }
 
