@@ -76,18 +76,29 @@ input[type="checkbox"]{
     display: flex;
     align-items: center;
     flex-direction: column;
-
+    margin-left: 70px;
+    margin-right: 70px;
 }
 /* project boxes */
 .project{
-    display: flow-root;
-    width: 1500px;
-
-    padding: 50px;
+    padding: 70px;
+}
+h1{
+    border: red solid 1px;
+    font-size: 4rem;
+}
+.projectContent{
+    margin-top: 35px;
+    display: flex;
+    gap: 35px;
+}
+p{
+    border: red solid 1px;
+    font-size: 2rem;
 }
 img{
-    width: 400px;
-    float: right;
+    width: 600px;
+    border-radius: 15px;
 }
 
 /* class used for displaying search results */

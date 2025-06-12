@@ -24,11 +24,12 @@ body{
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: 48px;
-
-    /* border */
-    /* border-left: solid 10px var(--highlight-color);
-    border-right: solid 10px var(--highlight-color);
-    margin: 0; */
+}
+h1{
+    margin: 0px;
+}
+p{
+    margin: 0px
 }
 
 .box{
