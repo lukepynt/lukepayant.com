@@ -1,10 +1,10 @@
 #name{
-    justify-self: center;
+    text-align: center;
     border: red solid 5px;
     font-size: clamp(3rem, 10vw, 6rem);
 }
 #desc{
-    justify-self: center;
+    text-align: center;
     font-size: clamp(1rem, 5vw, 2rem);
     border: red solid 5px;
 }
@@ -19,27 +19,24 @@
 /* ----button positions and sizes---- */
 /* contact buttons */
 #contactBtns{
-    margin: 30px;
-
+    margin: 2rem;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 #contactBtns a{
-    height: 70px;
-    width: 70px;
+    height: 4.5rem;
+    width: 4.5rem;
     text-decoration: none;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    fill: var(--highlight-color)
+    fill: var(--highlight-color);
 }
 /* main buttons */
 #pageBtns{
-    margin: 30px;
-    
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
@@ -48,9 +45,9 @@
     /* border: red solid 3px; */
 }
 #pageBtns a{
-    height: 140px;
-    width: 420px;
-    font-size: 40px;
+    height: 9rem;
+    width: 26rem;
+    font-size: 2.5rem;
     text-decoration: none;
 
     display: flex;
@@ -59,16 +56,15 @@
 }
 /* webring */
 #webring{
-    margin: 25px;
-
+    margin: 2rem;
     display: flex;
+    gap: 10px;
     justify-content: center;
 }
 #webring a{
-    margin: 7px;
-    font-size: 25px;
-    height: 60px;
-    width: 60px;
+    font-size: 1.5rem;
+    height: 4rem;
+    width: 4rem;
     border-radius: 100px;
     text-decoration: none;
 
