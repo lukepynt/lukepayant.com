@@ -8,10 +8,10 @@
 
 /* main box */
 .box{
+    margin: 70px;
     margin-top: 6vh;
     justify-self: center;
-    height: 600px;
-    width: 1000px;
+    max-width: 1000px;
 }
 
 /* ----button positions and sizes---- */
@@ -80,10 +80,10 @@
 
 /* desktops */
 #name{
-    font-size: 9vh;
+    font-size: 100px;
 }
 #desc{
-    font-size: 3vh;
+    font-size: 30px;
 }
 
 /* mobile */

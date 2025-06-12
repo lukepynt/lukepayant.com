@@ -76,25 +76,22 @@ input[type="checkbox"]{
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 /* project boxes */
 .project{
     padding: 70px;
-}
-h1{
-    border: red solid 1px;
-    font-size: 4rem;
-}
-.projectContent{
-    margin-top: 35px;
     display: flex;
+    align-items: center;
     gap: 35px;
 }
+h1{
+    font-size: 4rem;
+}
 p{
-    border: red solid 1px;
-    font-size: 2rem;
+    margin-top: 15px;
+    font-size: 1.5rem;
 }
 img{
     width: 600px;
