@@ -1,14 +1,16 @@
-#title{
-    margin: 6vh;
-    /* background-color: hsl(0, 0%, 8%);
-    border-radius: 15px; */
-    text-align: center;
+#name{
     justify-self: center;
+    border: red solid 5px;
+    font-size: clamp(3rem, 10vw, 6rem);
+}
+#desc{
+    justify-self: center;
+    font-size: clamp(1rem, 5vw, 2rem);
+    border: red solid 5px;
 }
 
 /* main box */
 .box{
-    margin: 70px;
     margin-top: 6vh;
     justify-self: center;
     max-width: 1000px;
@@ -79,14 +81,9 @@
 }
 
 /* desktops */
-#name{
-    font-size: 100px;
-}
-#desc{
-    font-size: 30px;
-}
 
-/* mobile */
+
+/* mobile
 @media screen and (max-width: 800px){
     #title #name{
         font-size: 50px;
@@ -94,4 +91,4 @@
     #title #desc{
         font-size: 20px;
     }
-}
+} */
