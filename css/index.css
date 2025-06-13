@@ -1,20 +1,18 @@
 #name{
     text-align: center;
     border: red solid 5px;
-    font-size: clamp(3rem, 10vw, 6rem);
-    min-width: 400px;
+    font-size: min(10vw, 6rem);
 }
 #desc{
     text-align: center;
-    font-size: clamp(1rem, 5vw, 2rem);
+    font-size: min(5vw, 2rem);
     border: red solid 5px;
-    min-width: 400px;
 }
 
 /* main box */
 .box{
-    margin-top: 6vh;
-    justify-self: center;
+    margin-top: 2vw;
+    margin-inline: auto;
     max-width: 1000px;
 }
 
@@ -48,14 +46,15 @@
     /* border: red solid 3px; */
 }
 #pageBtns a{
-    height: 8rem;
+    aspect-ratio: 25 / 8;
     width: 25rem;
-    font-size: 2.25rem;
+    font-size: min(2.25rem);
     text-decoration: none;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 /* webring */
 #webring{
