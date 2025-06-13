@@ -2,11 +2,13 @@
     text-align: center;
     border: red solid 5px;
     font-size: clamp(3rem, 10vw, 6rem);
+    min-width: 400px;
 }
 #desc{
     text-align: center;
     font-size: clamp(1rem, 5vw, 2rem);
     border: red solid 5px;
+    min-width: 400px;
 }
 
 /* main box */
@@ -37,6 +39,7 @@
 }
 /* main buttons */
 #pageBtns{
+    margin: 2rem;
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
