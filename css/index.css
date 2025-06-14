@@ -46,7 +46,7 @@
 #pageBtns a{
     aspect-ratio: 25 / 8;
     width: 25rem;
-    font-size: min(2.25rem);
+    font-size: min(6vw, 2.25rem);
     text-decoration: none;
 
     display: flex;
