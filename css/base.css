@@ -56,21 +56,21 @@ p{
 }
 
 /* ----All button effects---- */
-/* btn1 is for big page navigation buttons */
+/* btn1 is for big, page navigation buttons */
 .btn1{
     background-color: var(--ui-box);
     border: 1px solid hsl(0, 0%, 0%, 0);
     border-radius: 15px;
-    box-shadow: 3px 3px 5px hsl(0, 0%, 2%), -3px -3px 5px hsl(0, 0%, 30%, 0.80);
+    box-shadow: 4px 4px 10px hsl(0, 0%, 2%), -4px -4px 10px hsl(0, 0%, 25%, 0.80);
 
     cursor: pointer;
     transition: border-color 1s, background-color 0.25s;
 }
 .btn1:hover{
     background: repeating-linear-gradient(225deg, 
-        hsla(0, 0%, 12%, 0.4),
-        hsl(0, 0%, 20%, 0.4) 100px,
-        hsla(0, 0%, 12%, 0.4) 200px
+        hsla(0, 0%, 5%, 0.4),
+        hsl(0, 0%, 15%, 0.4) 30%,
+        hsla(0, 0%, 5%, 0.4) 60%
     );
     border: solid 1px var(--highlight-color);
 }
@@ -79,14 +79,14 @@ p{
     background-color: var(--background-color);
     --highlight-color: hsl(0, 0%, 70%);
     backdrop-filter: blur(1px);
-    box-shadow: inset 5px 5px 5px hsl(0, 0%, 0%), inset -5px -5px 5px hsl(0, 0%, 18%);
+    box-shadow: inset 5px 5px 10px hsl(0, 0%, 0%), inset -5px -5px 10px hsl(0, 0%, 18%);
 }
 /* btn2 is for checkbox buttons */
 .btn2{
     background-color: var(--ui-box);
     border: 1px solid hsl(0, 0%, 0%, 0);
     border-radius: 15px;
-    box-shadow: 1px 1px 5px hsl(0, 0%, 2%), -1px -1px 5px hsl(0, 0%, 30%, 0.80);
+    box-shadow: 3px 3px 10px hsl(0, 0%, 2%), -3px -3px 10px hsl(0, 0%, 25%, 0.80);
 
     cursor: pointer;
     transition: border-color 0.25s, background-color 0.25s;
