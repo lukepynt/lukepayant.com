@@ -20,10 +20,20 @@
 body{
     /* background */
     background-color: var(--background-color);
-    background-image: url(../assets/images/dots2.png);
+    background-image: url(../assets/images/dotsnlines.svg);
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: 48px;
+}
+body::after{
+    content: "";
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 40rem;
+    background: linear-gradient(transparent, var(--background-color) 80%, var(--background-color) 100%);
+    z-index: 0;
 }
 h1{
     margin: 0px;
@@ -33,13 +43,15 @@ p{
 }
 
 .box{
-    backdrop-filter: blur(1px);
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(2px);
     border: solid 1px var(--highlight-color);
     border-radius: 15px;
     background: repeating-linear-gradient(-225deg, 
-        hsla(0, 0%, 12%, 0.8),
-        hsl(0, 0%, 20%, 0.8) 500px,
-        hsla(0, 0%, 12%, 0.8) 1000px
+        hsla(0, 0%, 10%, 0.4),
+        hsl(0, 0%, 22%, 0.4) 500px,
+        hsla(0, 0%, 10%, 0.4) 1000px
     );
 }
 

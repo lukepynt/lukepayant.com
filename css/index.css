@@ -1,12 +1,10 @@
 #name{
     text-align: center;
-    border: red solid 5px;
     font-size: min(10vw, 6rem);
 }
 #desc{
     text-align: center;
     font-size: min(5vw, 2rem);
-    border: red solid 5px;
 }
 
 /* main box */
