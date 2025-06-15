@@ -25,13 +25,14 @@ body{
     background-attachment: fixed;
     background-size: 48px;
 }
+/* gradient/shadow at the bottom of background */
 body::after{
     content: "";
     position: fixed;
     width: 100%;
     bottom: 0;
     left: 0;
-    height: 40rem;
+    height: 35rem;
     background: linear-gradient(transparent, var(--background-color) 80%, var(--background-color) 100%);
     z-index: 0;
 }
