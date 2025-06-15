@@ -1,6 +1,6 @@
 #name{
     text-align: center;
-    font-size: min(10vw, 6rem);
+    font-size: min(12vw, 6rem);
 }
 #desc{
     text-align: center;
@@ -17,10 +17,10 @@
 /* ----button positions and sizes---- */
 /* contact buttons */
 #contactBtns{
-    margin: min(5vw, 2rem);
+    margin: min(3vw, 2rem);
     display: flex;
     justify-content: center;
-    gap: 1.25rem;
+    gap: min(2vw, 1.25rem);
 }
 #contactBtns a{
     aspect-ratio: 1/1;
@@ -38,9 +38,9 @@
 }
 /* main buttons */
 #pageBtns{
-    margin: min(5vw, 2rem);
+    margin: min(3vw, 2rem);
     display: flex;
-    gap: min(5vw, 2rem);
+    gap: min(3vw, 2rem);
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
@@ -58,14 +58,14 @@
 }
 /* webring */
 #webring{
-    margin: min(5vw, 2rem);
+    margin: min(3vw, 2rem);
     display: flex;
     gap: 0.625rem;
     justify-content: center;
 }
 #webring a{
     aspect-ratio: 1/1;
-    width: 4rem;
+    width: min(10vw, 4rem);
     border-radius: 100px;
     font-size: min(7.25vw, 1.5rem);
     text-decoration: none;
