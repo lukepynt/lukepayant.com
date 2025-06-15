@@ -4,12 +4,12 @@
 }
 #desc{
     text-align: center;
-    font-size: min(5vw, 2rem);
+    font-size: min(5vw, 3rem);
 }
 
 /* main box */
 .box{
-    margin-top: 2vw;
+    margin-top: 1rem;
     margin-inline: auto;
     max-width: 62.5rem;
 }
@@ -17,7 +17,7 @@
 /* ----button positions and sizes---- */
 /* contact buttons */
 #contactBtns{
-    margin: 2rem;
+    margin: min(5vw, 2rem);
     display: flex;
     justify-content: center;
     gap: 1.25rem;
@@ -25,7 +25,7 @@
 #contactBtns a{
     aspect-ratio: 1/1;
     width: 4.5rem;
-    padding: min(3%, 0.75rem);
+    padding: min(3vw, 0.75rem);
     text-decoration: none;
 
     display: flex;
@@ -36,9 +36,9 @@
 }
 /* main buttons */
 #pageBtns{
-    margin: 2rem;
+    margin: min(5vw, 2rem);
     display: flex;
-    gap: 2rem;
+    gap: min(5vw, 2rem);
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
@@ -56,7 +56,7 @@
 }
 /* webring */
 #webring{
-    margin: 2rem;
+    margin: min(5vw, 2rem);
     display: flex;
     gap: 0.625rem;
     justify-content: center;
@@ -75,11 +75,7 @@
 #webring a img{
     height: min(7.25vw, 2rem);
 }
-
-/* desktops */
-
-
-/* mobile
+/* mobile 
 @media screen and (max-width: 800px){
     #title #name{
         font-size: 50px;
@@ -87,4 +83,4 @@
     #title #desc{
         font-size: 20px;
     }
-} */
+}
