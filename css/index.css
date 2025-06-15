@@ -65,7 +65,7 @@
 }
 #webring a{
     aspect-ratio: 1/1;
-    width: min(10vw, 4rem);
+    width: min(12vw, 4rem);
     border-radius: 100px;
     font-size: min(7.25vw, 1.5rem);
     text-decoration: none;
