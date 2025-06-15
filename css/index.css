@@ -25,7 +25,6 @@
 #contactBtns a{
     aspect-ratio: 1/1;
     width: 4.5rem;
-    padding: min(3vw, 0.75rem);
     text-decoration: none;
 
     display: flex;
@@ -33,6 +32,9 @@
     align-items: center;
 
     fill: var(--highlight-color);
+}
+#contactBtns svg{
+    width: 70%;
 }
 /* main buttons */
 #pageBtns{
