@@ -24,7 +24,7 @@
 }
 #contactBtns a{
     aspect-ratio: 1/1;
-    width: 4.5rem;
+    width: min(15vw, 4.5rem);
     text-decoration: none;
 
     display: flex;
