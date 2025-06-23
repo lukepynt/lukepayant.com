@@ -1,8 +1,13 @@
 #name{
+    position: relative;
+    z-index: 1;
     text-align: center;
     font-size: min(12vw, 6rem);
+    margin-bottom: -0.15em;
 }
 #desc{
+    position: relative;
+    z-index: 1;
     text-align: center;
     font-size: min(5vw, 3rem);
 }
@@ -48,7 +53,7 @@
 #pageBtns a{
     aspect-ratio: 25 / 8;
     width: 25rem;
-    font-size: min(7.25vw, 2.25rem);
+    font-size: min(8vw, 2.25rem);
     text-decoration: none;
 
     display: flex;

@@ -1,3 +1,4 @@
+// ----Searching for Projects
 const projectBoxes = document.getElementById("projects").children;
 
 let projects = Array.from(projectBoxes).map(box =>{
@@ -23,3 +24,11 @@ function inputChange() {
         project.box.classList.toggle("hide", !passedFilters || !passedSearch);
     })
 }
+
+// ----Opening Projects
+const openBtns = document.querySelectorAll(".btn3");
+openBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        btn.parentElement.nextElementSibling.classList.toggle("hide");
+    })
+})

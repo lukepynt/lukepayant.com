@@ -1,10 +1,9 @@
 :root {
     --highlight-color: hsl(0, 0%, 95%);
     --background-color: hsl(0, 0%, 8%);
-    --ui-box: hsl(0, 0%, 10%);
     --light-highlight: hsl(0, 0%, 8%);
     --light-background: hsl(0, 0%, 95%);
-    --light-ui-box: hsl(0, 0%, 30%);
+    --ui-box: hsl(0, 0%, 10%);
 }
 
 *{
@@ -12,19 +11,28 @@
     color: var(--highlight-color);
     font-family: "Nunito", Arial;
 }
-
 @font-face{
     src: url(../assets/fonts/Nunito-VariableFont_wght.ttf);
     font-family: Nunito;
 }
+h1{
+    margin: 0px;
+}
+p{
+    margin: 0px
+}
 
+/* ----Background----*/
 body{
-    /* background */
     background-color: var(--background-color);
-    background-image: url(../assets/images/dotsnlines.svg);
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-size: 56px;
+}
+#background{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 /* gradient/shadow at the bottom of background */
 body::after{
@@ -37,13 +45,8 @@ body::after{
     background: linear-gradient(transparent, var(--background-color) 80%, var(--background-color) 100%);
     z-index: 0;
 }
-h1{
-    margin: 0px;
-}
-p{
-    margin: 0px
-}
 
+/* ----Main Box---- */
 .box{
     position: relative;
     z-index: 1;
@@ -58,7 +61,7 @@ p{
 }
 
 /* ----All button effects---- */
-/* btn1 is for page navigation buttons */
+/* btn1 is for big, page navigation buttons */
 .btn1{
     background-color: var(--ui-box);
     border: 1px solid hsl(0, 0%, 0%, 0);
@@ -87,7 +90,7 @@ p{
 .btn2{
     background-color: var(--ui-box);
     border: 1px solid hsl(0, 0%, 0%, 0);
-    border-radius: 100px;
+    border-radius: 15px;
     box-shadow: 3px 3px 10px hsl(0, 0%, 2%), -3px -3px 10px hsl(0, 0%, 25%, 0.80);
 
     cursor: pointer;
@@ -101,14 +104,4 @@ p{
     --highlight-color: hsl(0, 0%, 70%);
     backdrop-filter: blur(1px);
     box-shadow: inset 5px 5px 5px hsl(0, 0%, 0%), inset -5px -5px 5px hsl(0, 0%, 18%);
-}
-
-/* btn3 is for dropdowns */
-.btn3{
-    background-color: var(--light-ui-box);
-    border: 1px solid hsl(0, 0%, 0%, 0);
-    border-radius: 100px;
-
-    cursor: pointer;
-    transition: border-color 1s, background-color 0.25s;
 }
