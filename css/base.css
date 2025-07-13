@@ -4,7 +4,7 @@
     --ui-box: hsl(0, 0%, 10%);
     --light-highlight: hsl(0, 0%, 8%);
     --light-background: hsl(0, 0%, 95%);
-    --light-ui-box: hsl(0, 0%, 30%);
+    --light-ui-box: hsl(0, 0%, 25%);
 }
 
 *{
@@ -16,6 +16,10 @@
 @font-face{
     src: url(../assets/fonts/Nunito-VariableFont_wght.ttf);
     font-family: Nunito;
+}
+
+html{
+    overflow-y: scroll;
 }
 
 body{
@@ -110,5 +114,5 @@ p{
     border-radius: 100px;
 
     cursor: pointer;
-    transition: border-color 1s, background-color 0.25s;
+    transition: border-color 1s, background-color 0.25s, transform 0.25s ease;
 }

@@ -17,7 +17,7 @@
 /* ----Search box---- */
 /* Box */
 #searchBox{
-    margin: min(7.25vw, 3rem);
+    margin: min(7vw, 2.5rem);
     display: block;
     justify-self: center;
     max-width: 45rem;
@@ -70,42 +70,79 @@ input[type="checkbox"]{
 }
 /* project box */
 .project{
-    max-width: 95rem;
+    max-width: 90rem;
+    transition: border-radius 0.25s ease;
 }
 /* title */
 .projectTitle{
+    margin: min(5vw, 2.5rem);
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: min(5vw, 2rem);
 }
 .projectTitle h1{
-    font-size: 4rem;
-    margin: 2rem;
+    font-size: min(8vw, 4rem);
     display: inline-block;
 }
 .projectTitle .btn3{
     aspect-ratio: 1/1;
-    font-size: 1.5rem;
-    width: 2.5em;
+    font-size: 2rem;
+    width: 2.25em;
+}
+.expandedBtn{
+    transform: rotate(90deg);
 }
 /* content */
 .projectContent{
-    margin: 4rem;
     display: flex;
+    margin: min(1vw, 2.5rem);
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
 }
-.projectContent p{
-    font-size: 1.5rem;
+.projectDesc{
+    font-size: min(3vw, 1.5rem);
     max-width: 50%;
 }
+.projectDesc .btn1{
+    aspect-ratio: 25 / 8;
+    width: min(40vw, 20rem);
+    font-size: min(8vw, 2.25rem);
+    text-decoration: none;
+    justify-self: center;
+    margin-top: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 img{
-    width: 600px;
+    width: min(76vw, 38rem);
     border-radius: 15px;
 }
 
+.closedProject{
+    border-radius: 100px;
+}
+.closedProject .projectContent{
+    display: none;
+}
 /* class used for displaying search results */
 .hide{
     display: none;
 }
 
+@media (max-width: 1000px){
+    #back{
+        position: relative;
+        margin: 1em;
+        justify-self: center;
+
+        aspect-ratio: 2/1;
+        height: 2em;
+        width: auto;
+    }
+}
