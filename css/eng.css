@@ -104,7 +104,7 @@ input[type="checkbox"]{
 }
 .projectDesc{
     font-size: min(3vw, 1.5rem);
-    max-width: 50%;
+    width: min(76vw, 38rem);
 }
 .projectDesc .btn1{
     aspect-ratio: 25 / 8;
@@ -134,7 +134,6 @@ img{
 .hide{
     display: none;
 }
-
 @media (max-width: 1000px){
     #back{
         position: relative;
