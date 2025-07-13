@@ -30,26 +30,26 @@
 
     display: block;
     justify-self: center;
-    margin: 1em;
+    margin: min(2vw, 1em);
     width: 75%;
 
 
     text-align: center;
-    font-size: min(7.25vw, 1.5rem);
+    font-size: min(3vw, 1.5rem);
 }
 #searchBar::-webkit-search-cancel-button{
     display: none;
 }
 /* Search Filters */
 #searchFilters{
-    margin: min(7.25vw, 1.5rem);
+    margin: min(3vw, 1.5rem);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: min(7.25vw, 1.5rem);
+    gap: min(3vw, 1.5rem);
 }
 #searchFilters label{
-    font-size: min(7.25vw, 1rem);
+    font-size: min(2vw, 1rem);
     padding: 0.4em 1em;
     text-align: center;
 }
