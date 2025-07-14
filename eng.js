@@ -28,7 +28,7 @@ function inputChange() {
 // ----Opening Projects
 const openBtns = document.querySelectorAll(".btn3");
 openBtns.forEach(btn => {
-    // Open function
+    // Open/close project function
     btn.addEventListener("click", () => {
         btn.disabled = true;
         const project = btn.parentElement.parentElement;
@@ -38,7 +38,6 @@ openBtns.forEach(btn => {
         project.parentElement.appendChild(clone);
         clone.style.visibility = "hidden";
         clone.style.position = "absolute";
-        
         clone.classList.toggle("closedProject");
         
         project.style.width = project.offsetWidth + "px";
@@ -50,6 +49,7 @@ openBtns.forEach(btn => {
         let heightTime = [0.25, 0];
         let borderTime = [0.25, 0];
         const closed = project.classList.contains("closedProject");
+        //animate width/height only if width/height changes
         if(project.offsetWidth === clone.offsetWidth){
             widthTime[0] = 0;
         }
@@ -67,7 +67,6 @@ openBtns.forEach(btn => {
             borderTime[1] = widthTime[0];
             project.style.borderRadius = getComputedStyle(clone).borderRadius;
         }
-        //animate width/height only if width/height changes
         project.style.transition = `width ${widthTime[0]}s cubic-bezier(0.49, 0.02, 0.52, 0.97) ${widthTime[1]}s,
                                     height ${heightTime[0]}s cubic-bezier(0.72, 0, 0.26, 0.95) ${heightTime[1]}s,
                                     border-radius ${borderTime[0]}s ease ${borderTime[1]}s`
