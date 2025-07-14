@@ -51,7 +51,7 @@ openBtns.forEach(btn => {
             project.classList.toggle("closedProject");
         }else{
             //opening animation
-            project.style.transition = "width 0.5s cubic-bezier(0.49, 0.02, 0.52, 0.97), height 0.5s cubic-bezier(0.72, 0, 0.26, 0.95) 0.25s, border-radius 0.25s ease 0.5s";
+            project.style.transition = "width 0.5s cubic-bezier(0.49, 0.02, 0.52, 0.97), height 0.25s cubic-bezier(0.72, 0, 0.26, 0.95) 0.5s, border-radius 0.25s ease 0.5s";
             project.style.borderRadius = getComputedStyle(clone).borderRadius;
         }
         if(project.offsetWidth != clone.offsetWidth){
