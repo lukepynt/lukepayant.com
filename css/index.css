@@ -82,6 +82,9 @@
 #webring a img{
     height: min(7.25vw, 2rem);
 }
+#webring a svg{
+    fill: var(--highlight-color);
+}
 /* mobile 
 @media screen and (max-width: 800px){
     #title #name{

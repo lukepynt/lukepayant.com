@@ -1,5 +1,6 @@
 :root {
     --highlight-color: hsl(0, 0%, 95%);
+    --sec-highlight-color: hsl(0, 0%, 70%);
     --background-color: hsl(0, 0%, 8%);
     --ui-box: hsl(0, 0%, 10%);
     --light-highlight: hsl(0, 0%, 8%);
