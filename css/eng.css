@@ -21,6 +21,7 @@
     display: block;
     justify-self: center;
     max-width: 45rem;
+    width: 90vw;
 }
 /* Search Bar */
 #searchBar{
@@ -35,7 +36,7 @@
 
 
     text-align: center;
-    font-size: min(3vw, 1.5rem);
+    font-size: min(5vw, 1.5rem);
 }
 #searchBar::-webkit-search-cancel-button{
     display: none;
@@ -47,9 +48,12 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: min(3vw, 1.5rem);
+
+
+    border-radius: 100px; /* necessary to make scrolling look nicer */
 }
 #searchFilters label{
-    font-size: min(2vw, 1rem);
+    font-size: min(3vw, 1rem);
     padding: 0.4em 1em;
     text-align: center;
 }
@@ -87,7 +91,7 @@ input[type="checkbox"]{
 }
 .projectTitle .btn3{
     aspect-ratio: 1/1;
-    font-size: 2rem;
+    font-size: min(10vw, 2rem);
     width: 2.25em;
 }
 .expandedBtn{
@@ -96,11 +100,11 @@ input[type="checkbox"]{
 /* content */
 .projectContent{
     display: flex;
-    margin: min(1vw, 2.5rem);
+    margin: min(5vw, 2.5rem);
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: min(4vw, 2rem);
 }
 .projectDesc{
     font-size: min(3vw, 1.5rem);
@@ -109,10 +113,10 @@ input[type="checkbox"]{
 .projectDesc .btn1{
     aspect-ratio: 25 / 8;
     width: min(40vw, 20rem);
-    font-size: min(8vw, 2.25rem);
+    font-size: min(5vw, 2.25rem);
     text-decoration: none;
-    justify-self: center;
-    margin-top: 3rem;
+    margin-inline: auto;
+    margin-top: min(4vw, 2rem);
 
     display: flex;
     justify-content: center;
@@ -138,10 +142,20 @@ img{
     #back{
         position: relative;
         margin: 1em;
-        justify-self: center;
+        margin-inline: auto;
 
         aspect-ratio: 2/1;
         height: 2em;
         width: auto;
+    }
+    #searchFilters{
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        overflow-y: visible;
+        padding: 10px;
+    }
+    #searchFilters label{
+        white-space: nowrap;
     }
 }

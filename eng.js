@@ -46,10 +46,12 @@ openBtns.forEach(btn => {
 
         const closed = project.classList.contains("closedProject");
         if(!closed){
-            project.style.transition = "width 0.75s cubic-bezier(0.72, 0, 0.26, 0.95) 0.25s, height 0.5s cubic-bezier(0.72, 0, 0.26, 0.95), border-radius 0.25s ease";
+            //closing animation
+            project.style.transition = "width 0.5s cubic-bezier(0.49, 0.02, 0.52, 0.97) 0.25s, height 0.5s cubic-bezier(0.72, 0, 0.26, 0.95), border-radius 0.25s ease";
             project.classList.toggle("closedProject");
         }else{
-            project.style.transition = "width 0.75s cubic-bezier(0.72, 0, 0.26, 0.95), height 0.5s cubic-bezier(0.72, 0, 0.26, 0.95) 0.25s";
+            //opening animation
+            project.style.transition = "width 0.75s cubic-bezier(0.49, 0.02, 0.52, 0.97), height 0.5s cubic-bezier(0.72, 0, 0.26, 0.95) 0.25s";
         }
         project.style.width = clone.offsetWidth + "px";
         project.style.height = clone.offsetHeight + "px";
