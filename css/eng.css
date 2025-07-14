@@ -69,11 +69,11 @@ input[type="checkbox"]{
     align-items: center;
     flex-direction: column;
     margin-inline: auto;
+    position: relative; /*added so that absolutely positioned, cloned projects use relative sizing units*/
 }
 /* project box */
 .project{
     max-width: 90rem;
-    transition: border-radius 0.25s ease;
 }
 /* title */
 .projectTitle{

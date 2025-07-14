@@ -37,7 +37,7 @@ openBtns.forEach(btn => {
         project.parentElement.appendChild(clone);
         clone.style.visibility = "hidden";
         clone.style.position = "absolute";
-
+        
         clone.classList.toggle("closedProject");
         
         project.style.width = project.offsetWidth + "px";
@@ -49,16 +49,19 @@ openBtns.forEach(btn => {
             //closing animation
             project.style.transition = "width 0.5s cubic-bezier(0.49, 0.02, 0.52, 0.97) 0.25s, height 0.25s cubic-bezier(0.72, 0, 0.26, 0.95), border-radius 0.25s ease 0.25s";
             project.classList.toggle("closedProject");
-            console.log(project.offsetWidth);
         }else{
             //opening animation
-            project.style.transition = "width 0.5s cubic-bezier(0.49, 0.02, 0.52, 0.97), height 0.5s cubic-bezier(0.72, 0, 0.26, 0.95) 0.25s, border-radius 0.25s ease";
+            project.style.transition = "width 0.5s cubic-bezier(0.49, 0.02, 0.52, 0.97), height 0.5s cubic-bezier(0.72, 0, 0.26, 0.95) 0.25s, border-radius 0.25s ease 0.5s";
+            project.style.borderRadius = getComputedStyle(clone).borderRadius;
         }
-        project.style.width = project.style.width === clone.offsetWidth? "" : clone.offsetWidth + "px";
+        if(project.offsetWidth != clone.offsetWidth){
+            project.style.width = clone.offsetWidth + "px";
+        }
         project.style.height = clone.offsetHeight + "px";
         setTimeout(() => {
             project.style.width = "";
             project.style.height = "";
+            project.style.borderRadius = "";
             if(closed) project.classList.toggle("closedProject");
             project.style.transition = "";
         }, 750);
