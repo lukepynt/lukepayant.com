@@ -17,6 +17,7 @@
 }
 /* arrows */
 svg{
+    width: 70%;
     fill: var(--highlight-color);
 }
 #scrollInd svg{
