@@ -20,10 +20,6 @@ svg{
     width: 70%;
     fill: var(--highlight-color);
 }
-#scrollInd svg{
-    width: min(8vw, 2rem);
-    fill: var(--sec-highlight-color);
-}
 
 /* ----Search box---- */
 /* Box */
@@ -46,6 +42,9 @@ svg{
 
     text-align: center;
     font-size: min(6vw, 1.5rem);
+}
+#searchBar::placeholder{
+    color: var(--sec-highlight-color);
 }
 #searchBar::-webkit-search-cancel-button{
     display: none;
@@ -72,6 +71,11 @@ input:checked + label{
 }
 input[type="checkbox"]{
     display: none;
+}
+/* Scroll Indicator */
+#scrollInd svg{
+    width: min(8vw, 2rem);
+    fill: var(--sec-highlight-color);
 }
 
 /* ----Projects---- */
