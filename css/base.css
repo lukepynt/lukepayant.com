@@ -110,9 +110,9 @@ p{
 /* btn3 is for dropdown opening buttons */
 .btn3{
     background-color: var(--light-ui-box);
-    border: 1px solid hsl(0, 0%, 0%, 0);
+    border: 1px solid var(--sec-highlight-color);
     border-radius: 100px;
 
     cursor: pointer;
-    transition: border-color 1s, background-color 0.25s, transform 0.25s ease;
+    transition: transform 0.25s ease;
 }

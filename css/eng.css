@@ -28,6 +28,7 @@ svg{
     display: block;
     max-width: 45rem;
     width: 90vw;
+    padding: min(3vw, 1.5rem);
 }
 /* Search Bar */
 #searchBar{
@@ -36,7 +37,7 @@ svg{
     outline: none;
 
     display: block;
-    margin: min(2vw, 1em) auto;
+    margin-inline: auto;
     width: 75%;
 
 
@@ -51,12 +52,11 @@ svg{
 }
 /* Search Filters */
 #searchFilters{
-    margin: min(3vw, 1.5rem);
+    margin-top: min(3vw, 1.5rem);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: min(3vw, 1.5rem);
-
 
     border-radius: 100px; /* necessary to make scrolling look nicer */
 }
@@ -83,16 +83,16 @@ input[type="checkbox"]{
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-inline: auto;
-    position: relative; /*added so that absolutely positioned, cloned projects use relative sizing units*/
+    gap: min(3vw, 1rem);
+    position: relative; /*added so that absolutely positioned, cloned projects can use relative sizing units*/
 }
 /* project box */
 .project{
-    max-width: 90rem;
+    max-width: 83rem;
+    padding: min(5vw, 2.5rem);
 }
 /* title */
 .projectTitle{
-    margin: min(5vw, 2.5rem);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -100,7 +100,6 @@ input[type="checkbox"]{
 }
 .projectTitle h1{
     font-size: min(8vw, 4rem);
-    display: inline-block;
 }
 .projectTitle .btn3{
     aspect-ratio: 1/1;
@@ -118,32 +117,35 @@ input[type="checkbox"]{
 }
 /* content */
 .projectContent{
+    margin-top: min(5vw, 2.5rem);
     display: flex;
-    margin: min(5vw, 2.5rem);
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: min(4vw, 2rem);
 }
 .projectDesc{
+    flex: 1 1 0px;
     font-size: min(4.5vw, 1.5rem);
-    width: min(76vw, 38rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .projectDesc .btn1{
     aspect-ratio: 25 / 8;
-    width: min(40vw, 20rem);
+    width: 9em;
     font-size: min(5vw, 2.25rem);
     text-decoration: none;
-    margin-inline: auto;
-    margin-top: min(4vw, 2rem);
+    margin: min(4vw, 2rem);
+    margin-bottom: 0px;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 img{
-    width: min(76vw, 38rem);
+    max-width: 38rem;
+    width: 100%;
     border-radius: 15px;
 }
 
@@ -176,14 +178,12 @@ img{
         flex-wrap: nowrap;
         justify-content: flex-start;
         overflow-x: auto;
-        overflow-y: visible;
-        padding: 10px;
+        padding: 10px;  /* make room for border shadow */
     }
     #scrollInd{
         display: block;
         text-align: center;
-        margin-bottom: min(3vw, 1.5rem);
-        font-size: min(4vw, 1.1rem);
+        margin-top: min(3vw, 1.5rem);
     }
     #searchFilters label{
         white-space: nowrap;

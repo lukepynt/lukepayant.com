@@ -40,8 +40,8 @@ openBtns.forEach(btn => {
         clone.style.position = "absolute";
         clone.classList.toggle("closedProject");
         
-        project.style.width = project.offsetWidth + "px";
-        project.style.height = project.offsetHeight + "px";
+        project.style.width = project.getBoundingClientRect().width + "px";
+        project.style.height = project.getBoundingClientRect().height + "px";
         void project.offsetWidth; //force browser to register the current width and height before changing.
 
         //animation timings
@@ -70,17 +70,18 @@ openBtns.forEach(btn => {
         project.style.transition = `width ${widthTime[0]}s cubic-bezier(0.49, 0.02, 0.52, 0.97) ${widthTime[1]}s,
                                     height ${heightTime[0]}s cubic-bezier(0.72, 0, 0.26, 0.95) ${heightTime[1]}s,
                                     border-radius ${borderTime[0]}s ease ${borderTime[1]}s`
-                                    
-        project.style.width = clone.offsetWidth + "px";
-        project.style.height = clone.offsetHeight + "px";
+        
+        project.style.width = clone.getBoundingClientRect().width + "px";
+        project.style.height = clone.getBoundingClientRect().height + "px";
 
         const totTime = Math.max(widthTime[0]+widthTime[1], heightTime[0]+heightTime[1], borderTime[0]+borderTime[1]) * 1000;
         setTimeout(() => {
+            if(closed) project.classList.toggle("closedProject");
             project.style.width = "";
             project.style.height = "";
             project.style.borderRadius = "";
-            if(closed) project.classList.toggle("closedProject");
             project.style.transition = "";
+            void project.offsetWidth;
             btn.disabled = false;
         }, totTime);
 
