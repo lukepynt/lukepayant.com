@@ -73,6 +73,9 @@ input[type="checkbox"]{
     display: none;
 }
 /* Scroll Indicator */
+#scrollInd{
+    display: none;
+}
 #scrollInd svg{
     width: min(8vw, 2rem);
     fill: var(--sec-highlight-color);
@@ -148,9 +151,10 @@ img{
     width: 100%;
     border-radius: 15px;
 }
-
+/* closed project */
 .closedProject{
     border-radius: 100px;
+    width: min(95vw, 60rem);
 }
 .closedProject .projectContent{
     display: none;
@@ -158,10 +162,6 @@ img{
 /* class used for displaying search results */
 .hide{
     display: none;
-}
-/*scroll indicator*/
-#scrollInd{
-        display: none;
 }
 @media (max-width: 1000px){
     #back{
