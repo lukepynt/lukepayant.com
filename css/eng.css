@@ -154,7 +154,7 @@ img{
 /* closed project */
 .closedProject{
     border-radius: 100px;
-    width: min(95vw, 60rem);
+    width: min(100%, 60rem);
 }
 .closedProject .projectContent{
     display: none;
