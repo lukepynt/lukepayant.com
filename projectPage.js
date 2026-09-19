@@ -29,11 +29,11 @@ searchFilters.addEventListener("change", inputChange);
 
 function inputChange() {
     const activeFilters = Array.from(searchFilters.querySelectorAll("input[type='checkbox']:checked")).map(filter => filter.value);
-    const search = searchInput.value.toLowerCase();
+    const search = searchInput.value.toLowerCase().trim();
     projects.forEach(project => {
-        const passedFilters = project.keywords.some(keyword => activeFilters.every(filter => keyword == filter)) || activeFilters.length == 0;
-        const passedSearch = project.name.includes(search) || project.desc.includes(search) || project.keywords.some(keyword => keyword.includes(search));
-        project.box.classList.toggle("hide", !passedFilters || !passedSearch);
+        const inFilters = activeFilters.every(filter => project.keywords.some(keyword => filter == keyword)) || activeFilters.length == 0; /* True if every filter selected matches to some keyword or if no filters are selected */
+        const inSearch = project.name.includes(search) || project.desc.includes(search) || project.keywords.some(keyword => keyword.includes(search));
+        project.box.classList.toggle("hide", !inFilters || !inSearch);
     })
 }
 
