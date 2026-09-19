@@ -1,4 +1,17 @@
-// ----Searching for Projects
+const searchFilters = document.getElementById("searchFilters");
+
+// ----Display Scroll indicator----
+const scrollInd = document.getElementById("scrollInd");
+
+function manageScrollInd(){
+    const overflowing = searchFilters.scrollWidth > searchFilters.clientWidth;
+    scrollInd.classList.toggle("hide", !overflowing);
+}
+
+manageScrollInd()
+window.addEventListener("resize", manageScrollInd);
+
+// ----Searching for Projects----
 const projectBoxes = document.getElementById("projects").children;
 
 let projects = Array.from(projectBoxes).map(box =>{
@@ -12,11 +25,10 @@ let projects = Array.from(projectBoxes).map(box =>{
 const searchInput = document.getElementById("searchBar");
 searchInput.addEventListener("input", inputChange);
 
-const filters = document.getElementById("searchFilters");
-filters.addEventListener("change", inputChange);
+searchFilters.addEventListener("change", inputChange);
 
 function inputChange() {
-    const activeFilters = Array.from(filters.querySelectorAll("input[type='checkbox']:checked")).map(filter => filter.value);
+    const activeFilters = Array.from(searchFilters.querySelectorAll("input[type='checkbox']:checked")).map(filter => filter.value);
     const search = searchInput.value.toLowerCase();
     projects.forEach(project => {
         const passedFilters = project.keywords.some(keyword => activeFilters.every(filter => keyword == filter)) || activeFilters.length == 0;
@@ -25,7 +37,7 @@ function inputChange() {
     })
 }
 
-// ----Opening Projects
+// ----Opening Projects----
 const openBtns = document.querySelectorAll(".btn3");
 openBtns.forEach(btn => {
     // Open/close project function

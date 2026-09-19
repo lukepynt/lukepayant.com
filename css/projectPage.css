@@ -50,20 +50,28 @@ svg{
 #searchBar::-webkit-search-cancel-button{
     display: none;
 }
+
 /* Search Filters */
 #searchFilters{
     margin-top: min(3vw, 1.5rem);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    
+    overflow-x: auto;
+    
+    justify-content: start;
     gap: min(3vw, 1.5rem);
 
     border-radius: 100px; /* necessary to make scrolling look nicer */
+    padding: 10px;  /* make room for border shadow */
 }
 #searchFilters label{
     font-size: min(4vw, 1.1rem);
     padding: 0.4em 1em;
     text-align: center;
+    white-space: nowrap;
 }
 input:checked + label{
     background-color: var(--light-background);
@@ -72,13 +80,19 @@ input:checked + label{
 input[type="checkbox"]{
     display: none;
 }
+
 /* Scroll Indicator */
 #scrollInd{
-    display: none;
+    display: block;
+    text-align: center;
+    margin-top: min(3vw, 1.5rem);
 }
 #scrollInd svg{
     width: min(8vw, 2rem);
     fill: var(--sec-highlight-color);
+}
+#scrollInd.hide{
+    display: none;
 }
 
 /* ----Projects---- */
@@ -173,19 +187,5 @@ img{
         aspect-ratio: 2/1;
         height: 2em;
         width: auto;
-    }
-    #searchFilters{
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        overflow-x: auto;
-        padding: 10px;  /* make room for border shadow */
-    }
-    #scrollInd{
-        display: block;
-        text-align: center;
-        margin-top: min(3vw, 1.5rem);
-    }
-    #searchFilters label{
-        white-space: nowrap;
     }
 }
