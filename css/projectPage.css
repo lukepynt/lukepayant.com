@@ -80,6 +80,26 @@ input:checked + label{
 input[type="checkbox"]{
     display: none;
 }
+/* Make scrollbar look better */
+/* Chrome based browsers */
+#searchFilters::-webkit-scrollbar{
+    background: transparent;
+    height: 0.75rem;
+}
+#searchFilters::-webkit-scrollbar-track {
+    background: transparent;
+}
+#searchFilters::-webkit-scrollbar-thumb {
+    background: var(--sec-highlight-color);
+}
+#searchFilters::-webkit-scrollbar-button {
+    display: none;
+}
+/* Firefox */
+#searchFilters {
+    scrollbar-color: var(--sec-highlight-color) transparent;
+    scrollbar-width: thin;
+}
 
 /* Scroll Indicator */
 #scrollInd{
